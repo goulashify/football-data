@@ -13,3 +13,7 @@ dev:
 .PHONY: test-e2e
 test-e2e:
 	@npx playwright test
+
+.PHONY: cors-proxy
+cors-proxy:
+	npx local-cors-proxy --proxyUrl http://api.football-data.org --proxyPartial ''
